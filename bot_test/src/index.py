@@ -6,22 +6,7 @@ import asyncio
 bot = commands.Bot(command_prefix='<', description='This is a reminders oriented bot.')
 
 # python src/index.py
-
-clan_list={ 
-                "EMK" : "Expansive Multiversal Kingdom",
-                "CC"  : "Crusher Core",
-                "TKO" : "Total Knock-Out",
-                "MIH" : "Made in Heaven",
-                "TWOH": "The World Over Heaven",
-                "DC"  : "Dark Clouds",
-                "COL" : "Children of Light",
-                "FF"  : "Freeza Force",
-                "TA"  : "Tāresu-Army",
-                "G"   : "Guest",
-                "GW"  : "Generational Warriors",
-                "PCE" : "Planetary Covent Enforcers"
-              }
-
+YOURBOTKEY = "here goes the bot key"
 
 @bot.command()
 async def stats(ctx):
@@ -101,4 +86,4 @@ async def on_disconnect():
     await bot.change_presence(status=Status.offline)
     print('My bot off')
 
-bot.run('OTczOTQ4Njg0ODU1Mjg3ODE4.G5SgxN.pqFJtpesUrtkq6tbYXSL-Q4ipW69QsQzuoWB9Y')
+bot.run(YOURBOTKEY)
